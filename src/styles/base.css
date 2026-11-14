@@ -1,0 +1,234 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: var(--text-md);
+  line-height: 1.5;
+  color: var(--color-ink);
+  background: var(--color-paper);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+#app {
+  min-height: 100%;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+h1 {
+  font-size: var(--text-xl);
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+h2 {
+  font-size: var(--text-lg);
+  font-weight: 750;
+}
+
+input,
+textarea,
+select,
+button {
+  font: inherit;
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  min-height: 44px;
+  padding: var(--space-2) var(--space-4);
+  border: var(--border-width) solid var(--color-ink);
+  border-radius: var(--radius);
+  background: var(--color-surface);
+  font-weight: 700;
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.btn:hover:not(:disabled) {
+  background: var(--color-paper);
+}
+
+.btn:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+.btn:disabled {
+  cursor: not-allowed;
+  border-color: var(--color-line);
+  color: var(--color-ink-soft);
+  background: transparent;
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  border-color: var(--color-ink);
+  color: var(--color-primary-text);
+  box-shadow: var(--shadow);
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: var(--color-primary-hover);
+}
+
+.btn-primary:disabled {
+  box-shadow: none;
+}
+
+.btn-quiet {
+  border-color: transparent;
+  background: transparent;
+}
+
+.btn-quiet:hover:not(:disabled) {
+  border-color: var(--color-line);
+  background: transparent;
+}
+
+.btn-icon {
+  padding: var(--space-2);
+  min-width: 44px;
+}
+
+.btn svg {
+  width: 20px;
+  height: 20px;
+  flex: none;
+}
+
+/* Form controls */
+.field {
+  display: block;
+  width: 100%;
+  min-height: 44px;
+  padding: var(--space-2) var(--space-3);
+  border: var(--border-width) solid var(--color-line);
+  border-radius: var(--radius);
+  background: var(--color-surface);
+}
+
+.field:focus {
+  border-color: var(--color-ink);
+  outline: none;
+}
+
+textarea.field {
+  resize: vertical;
+  line-height: 1.6;
+}
+
+.label {
+  display: block;
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--color-ink-soft);
+  margin-bottom: var(--space-2);
+}
+
+/* Segmented choice (radio group drawn as joined buttons) */
+.choice {
+  display: inline-flex;
+  border: var(--border-width) solid var(--color-ink);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.choice label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 40px;
+  padding: var(--space-1) var(--space-4);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.choice label + label {
+  border-left: var(--border-width) solid var(--color-ink);
+}
+
+.choice input {
+  position: absolute;
+  opacity: 0;
+  inset: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+.choice label:has(input:checked) {
+  background: var(--color-ink);
+  color: var(--color-surface);
+}
+
+.choice label:has(input:focus-visible) {
+  outline: 3px solid var(--color-focus);
+  outline-offset: -5px;
+}
+
+.notice {
+  padding: var(--space-2) var(--space-3);
+  border-left: 4px solid var(--color-notice-ink);
+  background: var(--color-notice-bg);
+  color: var(--color-notice-ink);
+  font-size: var(--text-sm);
+}
+
+.error-text {
+  color: var(--color-error-ink);
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
+
+.muted {
+  color: var(--color-ink-soft);
+}
+
+.num {
+  font-variant-numeric: tabular-nums;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 1ms !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
