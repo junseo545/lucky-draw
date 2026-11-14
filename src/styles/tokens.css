@@ -1,0 +1,65 @@
+/* The only place spacing, radius, shadow, color and type sizes are defined. */
+:root {
+  --font-sans: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, system-ui, 'Apple SD Gothic Neo',
+    'Malgun Gothic', sans-serif;
+
+  /* Paper and ink */
+  --color-paper: #f2eee5;
+  --color-surface: #fbf9f4;
+  --color-ink: #1f1d1a;
+  --color-ink-soft: #5d5952;
+  --color-line: #cfc7b7;
+  --color-focus: #1f1d1a;
+
+  /* Wheel: three alternating segment colors and a gray reserved for the blank */
+  --color-seg-1: #c8372d;
+  --color-seg-1-text: #fffaf2;
+  --color-seg-2: #efe3c8;
+  --color-seg-2-text: #1f1d1a;
+  --color-seg-3: #d99a2b;
+  --color-seg-3-text: #1f1d1a;
+  --color-blank: #77746d;
+  --color-blank-text: #fffaf2;
+  --color-rim: #1f1d1a;
+  --color-pin: #e6e0d3;
+  --color-pin-edge: #8d877b;
+  --color-pointer: #1f1d1a;
+  --color-wheel-shadow: rgba(31, 29, 26, 0.16);
+
+  /* Actions and notices */
+  --color-primary: #c8372d;
+  --color-primary-hover: #a82c23;
+  --color-primary-text: #fffaf2;
+  --color-notice-bg: #f5e5bf;
+  --color-notice-ink: #5e420b;
+  --color-error-ink: #9e2a22;
+
+  /* Spacing scale */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+
+  /* One radius and one shadow for UI parts (the wheel's shadow color is above) */
+  --radius: 4px;
+  --shadow: 0 2px 0 rgba(31, 29, 26, 0.18);
+  --border-width: 2px;
+
+  /* Type */
+  --text-sm: 14px;
+  --text-md: 16px;
+  --text-lg: 20px;
+  --text-xl: 28px;
+  --text-display: clamp(40px, 6.4vh, 76px);
+
+  /* Layout */
+  --topbar-height: clamp(96px, 12vh, 132px);
+  --side-width: clamp(200px, 17vw, 320px);
+
+  /* Motion */
+  --duration-fast: 150ms;
+  --duration-relayout: 450ms;
+}
